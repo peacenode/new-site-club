@@ -1,0 +1,61 @@
+/* Existing styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 24px; /* Add padding for spacing */
+    width: 100%; /* Ensure it takes full width */
+    padding-right: 30px; /* Optional: add extra padding on the right */
+}
+
+.top-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.column {
+    flex: 1; /* Allow columns to grow equally */
+    padding: 24px; /* Add padding for spacing */
+    margin: 24px;
+}
+
+.bottom-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows the images to wrap to the next line */
+    justify-content: left; /* Centers the images horizontally */
+    align-items: center; /* Centers the images vertically */
+    padding: 24px;
+}
+
+.bottom-section img {
+    height: 48px; /* Set the desired height for all images */
+    margin: 24px; /* Optional: adds space between images */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+}
+
+/* New media query for mobile */
+@media (max-width: 400px) {
+    .top-section {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .column {
+        margin: 10px 12px; /* Adjust margin for stacked layout */
+    }
+}
+
+/* Default styles for the second column (left-aligned on mobile) */
+.column:nth-child(2) {
+    text-align: left; /* Left align text on mobile */
+}
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+    .column:nth-child(2) {
+        text-align: right; /* Right align text on desktop */
+    }
+}
