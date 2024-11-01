@@ -20,7 +20,7 @@ body {
 .column {
     flex: 1; /* Allow columns to grow equally */
     padding: 24px; /* Add padding for spacing */
-    margin: 24px;
+    margin: 12px;
 }
 
 .bottom-section {
@@ -28,17 +28,17 @@ body {
     flex-wrap: wrap; /* Allows the images to wrap to the next line */
     justify-content: left; /* Centers the images horizontally */
     align-items: center; /* Centers the images vertically */
-    padding: 24px;
+    padding: 12px;
 }
 
 .bottom-section img {
     height: 48px; /* Set the desired height for all images */
-    margin: 24px; /* Optional: adds space between images */
+    margin: 12px; /* Optional: adds space between images */
     object-fit: contain; /* Ensures the image maintains its aspect ratio */
 }
 
 /* New media query for mobile */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .top-section {
         flex-direction: column; /* Stack columns vertically */
     }
